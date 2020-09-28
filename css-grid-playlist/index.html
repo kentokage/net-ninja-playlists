@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!--
+    * creates a grid for the webpage
+    * doesn't matter what the order of elements are
+    * better than float (bad) and flex, don't need nested elements
+    * just placing items on the 'grid'
+
+    * grid lines have position elements on the grid */
+ -->
+
+<html>
+
+<head>
+    <style>
+        body {
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+        }
+
+        #content {
+            display: grid;
+            /* 3 columns for each % */
+            /* grid-template-columns: 25% 50% 25%; */
+            /* fr = fraction of overall width */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* repeat the number of times */
+            /* grid-template-columns: repeat(2, 1fr) repeat(5, 2fr) repeat(2, 1fr); */
+            grid-template-columns: repeat(3, 1fr);
+            /* set's height, disregards content inside it */
+            /* grid-auto-rows: 200px; */
+            /* can also set min max */
+
+            /* used when you have grid-tempalte-columns defined */
+            /* grid-auto-rows: minmax(200px, auto); */
+
+            /* grid-template-rows: 200px 300px 400px 200px; */
+            grid-template-rows: repeat(4, minmax(200px, auto));
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            /* grid-gap: 20px; */
+            /* just between the columns and rows */
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+            /* can set margins here, but it will add an extra margins unnecessarily on the outside */
+        }
+
+        #content div:nth-child(even) {
+            background: #777;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+
+        <div>1</div>
+        <div>2</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lectus ante, lobortis vitae felis et, egestas
+            vulputate nulla. Fusce sodales enim nulla, ac iaculis ligula congue eget. Suspendisse in venenatis mi. Sed
+            mollis magna nec auctor laoreet. Nam tristique dolor nisl, et imperdiet arcu fermentum nec. Donec a lobortis
+            risus. Nam et aliquet tellus, eget eleifend tellus. Proin sed mi venenatis urna gravida molestie nec sed
+            purus. Vestibulum nibh tellus, bibendum quis ex eu, fermentum aliquet purus. Suspendisse porta, justo non
+            pharetra bibendum, tellus sem euismod nulla, volutpat tincidunt tellus purus nec nibh. Pellentesque habitant
+            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam mattis sagittis auctor. Nam
+            maximus viverra mauris quis eleifend. Fusce ligula enim, imperdiet quis vulputate eu, pulvinar eget augue.
+
+            Etiam sodales hendrerit lorem a porta. Pellentesque molestie massa vitae tortor fringilla, vitae ornare nisi
+            dapibus. Curabitur non fermentum dolor. In gravida vitae est eu malesuada. Sed ac metus enim. Fusce non
+            varius odio, finibus bibendum dui. In iaculis ut est sit amet viverra. Mauris lobortis non dolor placerat
+            venenatis. Nunc malesuada arcu erat, vitae rutrum quam feugiat non. Duis vulputate enim quis mauris
+            ullamcorper, facilisis feugiat eros eleifend. Vivamus eget tincidunt ex.</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+
+    </div>
+
+</body>
+
+</html>

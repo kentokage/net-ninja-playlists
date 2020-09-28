@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- * grid lines have position elements on the grid
+-->
+<html>
+
+<head>
+    <style>
+        body {
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, minmax(150px, auto));
+            grid-gap: 10px;
+            width: 100vw;
+            height: 100vh;
+            /* vertical alignment, by default stretch */
+            /* align-items: flex-end; */
+
+            /* horizontal alignment */
+            /* justify-items: end */
+        }
+
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+        }
+
+        #content div:nth-child(even) {
+            background: #777;
+            padding: 30px;
+        }
+
+        .one {
+            justify-self: end;
+            align-self: end;
+        }
+
+        .two {
+            justify-self: center;
+            align-self: center;
+        }
+
+        .three {
+            align-self: start;
+            justify-self: start;
+        }
+
+        .four {}
+
+        .five {}
+
+        .six {}
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+</body>
+
+</html>
